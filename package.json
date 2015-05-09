@@ -1,0 +1,8 @@
+{
+	"name": "pinf-to-digitalocean",
+	"version": "0.1.0",
+  "main": "plugin.js",
+  "dependencies": {
+    "do-wrapper": "git://github.com/matt-major/do-wrapper.git#0492df8b869e94fd00ed6c8140e050f92660d9f8"    
+  }
+}
