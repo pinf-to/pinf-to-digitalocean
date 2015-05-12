@@ -275,6 +275,10 @@ exports.for = function (API) {
 			resolvedConfig.dropplet.imageName = resolvedConfig.dropplet.imageName || "Docker.+on 14";
 
 
+			// Normalize name to only allowed characters
+			resolvedConfig.dropplet.name = resolvedConfig.dropplet.name.replace(/[^0-9a-zA-Z\.-]+/g, "-");
+
+
 			resolvedConfig.status = "unknown";
 
 			var api = makeAPI(resolvedConfig);
