@@ -380,18 +380,6 @@ exports.for = function (API) {
 		});
 	}
 
-	exports.turn = function (resolvedConfig) {
-
-console.log("TURN PINF TO DIGITAL OCEAN - resolvedConfig", resolvedConfig);
-
-
-// TODO: Deploy remote environment boorstrap code via SSH if changed.
-
-console.log("TODO: Upload ", resolvedConfig.sourcePath);
-
-
-	}
-
 	return exports;
 }
 
