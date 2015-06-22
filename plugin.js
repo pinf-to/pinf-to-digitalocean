@@ -259,6 +259,18 @@ exports.for = function (API) {
 
 		return resolver({}).then(function (resolvedConfig) {
 
+			if (
+				!resolvedConfig.credentials.token ||
+				!resolvedConfig.credentials.tokenName
+			) {
+				API.EXTEND(true, resolvedConfig, {
+					vm: {
+						ip: ""
+					}
+				});
+				return resolvedConfig;
+			}
+
 			API.ASSERT.equal(typeof resolvedConfig.credentials.token, "string");
 			API.ASSERT.equal(typeof resolvedConfig.credentials.tokenName, "string");
 
