@@ -260,6 +260,7 @@ exports.for = function (API) {
 		return resolver({}).then(function (resolvedConfig) {
 
 			if (
+				resolvedConfig.enabled === false ||
 				!resolvedConfig.credentials.token ||
 				!resolvedConfig.credentials.tokenName
 			) {
