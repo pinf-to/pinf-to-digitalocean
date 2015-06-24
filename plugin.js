@@ -264,6 +264,9 @@ exports.for = function (API) {
 				!resolvedConfig.credentials.token ||
 				!resolvedConfig.credentials.tokenName
 			) {
+				if (resolvedConfig.enabled === false) {
+					API.console.verbose("Skip resolve because it is disabled.");
+				}
 				API.EXTEND(true, resolvedConfig, {
 					vm: {
 						ip: ""
